@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const Header = () => {
   const [country, setCountry] = useState('');
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData]:any = useState({});
   const [isError, setIsError] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -58,8 +58,8 @@ const Header = () => {
     <div 
      className='container h-3/5 flex flex-col relative justify-center items-center rounded-b-4xl grayscale-40 bg-no-repeat bg-cover bg-center'
      style={{backgroundImage:`url(${bgImage})`}}
-    >
-          {/* Location Name Display */}
+      >
+            {/* Location Name Display */}
           { weatherData.cod !== undefined ? (
             <div className='flex flex-col justify-center items-center'>
               <h2 className='absolute top-6 text-white font-bold text-xl'>
@@ -114,7 +114,7 @@ const Header = () => {
 
             <div className='absolute -bottom-72 scroll-bar-hidden overflow-scroll w-full h-72 rounded-lg flex flex-col items-start justify-center'>
               <div className='flex flex-row ml-6'>
-              {weatherData.list.map((item) => {
+              {weatherData.list.map((item:any) => {
               return <TimeStampCard time={item.dt_txt} weatherIcon={item.weather[0].icon} weatherName={item.weather[0].description}/>
             })}
               </div>
