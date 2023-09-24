@@ -16,7 +16,7 @@ const Header = () => {
   const [bgImage, setBgImage] = useState('default.jpg');
 
   const API_KEY = 'ec18c3f6cc7f715638bfbd94e1ef9cfd';
-  const API_URL = 'http://api.openweathermap.org/data/2.5/forecast?1&appid=';
+  const API_URL = 'https://api.openweathermap.org/data/2.5/forecast?1&appid=';
   const API_PARAM = '&mode=json&units=metric&cnt=7';
   
   const handlerChange = (e : any) => {
